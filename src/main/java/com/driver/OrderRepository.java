@@ -17,6 +17,7 @@ public class OrderRepository {
         this.orderdb = new HashMap<String,Order>();
         this.deliveryPartnerdb=new HashMap<String,DeliveryPartner>();
         this.orderTimeDb=new HashMap<String,String>();
+        this.orderPartnerPairDb=new HashMap<DeliveryPartner,List<Order>>();
     }
 
     public String addOrder(Order order){
