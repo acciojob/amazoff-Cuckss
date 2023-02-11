@@ -56,9 +56,9 @@ public class OrderRepository {
   }
   public int  getOrderCountByPartnerId(String partnerId){
         DeliveryPartner deliveryPartner=deliveryPartnerdb.get(partnerId);
-       int noOfOrders=orderPartnerPairDb.get(deliveryPartner).size();
 
-       return noOfOrders;
+return deliveryPartner.getNumberOfOrders();
+
   }
   public List<String> getOrdersByPartnerId(String partnerId){
         DeliveryPartner deliveryPartner=deliveryPartnerdb.get(partnerId);
